@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 func main() {
@@ -22,7 +21,7 @@ func main() {
 
 	for i := 0; i < len(matrix); i++ {
 		for j := 0; j < len(matrix[i]); j++ {
-			if j >= ((len(matrix)-1)-i) && (j <= (len(matrix[i])-1)-int(math.Abs(float64((len(matrix)-1)-i)))) {
+			if j >= ((len(matrix)-1)-i) && (j <= (len(matrix[i])-1)-((len(matrix)-1)-i)) {
 				fmt.Print(symbol)
 			} else {
 				fmt.Print(" ")
